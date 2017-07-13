@@ -1,4 +1,4 @@
-# angularjs-webpack Formstack Front End Developer Applicant Assignment
+# Formstack Front End Developer Applicant Assignment
 
 
 
@@ -30,7 +30,7 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 
 ## Testing
 
-####Unit Tests
+###Unit Tests
 
 * single run: `npm test`
 * live mode: `npm run test-watch`
