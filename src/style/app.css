@@ -10,6 +10,13 @@ body {
   background: linear-gradient(to bottom, rgba(77, 158, 234, 1) 0%, rgb(42, 166, 229) 100%);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
 .input {
   position: relative;
   display: inline-block;
@@ -110,7 +117,7 @@ body {
   font-size: 45px;
 }
 
-.invalid {
+.invalid, .empty {
   font-size: 20px;
   padding-right: 27px;
 }

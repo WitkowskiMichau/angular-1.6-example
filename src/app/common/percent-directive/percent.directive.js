@@ -12,22 +12,34 @@ export const PercentDirective = () => {
 
 export const PercentController = () => {
   return ['$scope', function ($scope) {
+
+    this.$onInit = () => {
+      $scope.floatValue = null;
+    };
+
     $scope.$watch('floatValue', () => {
       this.percentValue = makePercent($scope.floatValue);
     });
 
     const makePercent = (floatValue) => {
-      if (dataIsValid(floatValue)) {
+      if (dataInEmpty(floatValue)) {
+        this.elementClass = 'empty';
+        return 'Try me.';
+      } else if (dataIsValid(floatValue)) {
         this.elementClass = 'valid';
         return parseFloat(floatValue) * 100 + '%'
       } else {
         this.elementClass = 'invalid';
-        return 'Number is not valid';
+        return 'Number is not valid.';
       }
     };
 
     const dataIsValid = (floatValue) => {
       return floatValue && parseFloat(floatValue) <= 1 && parseFloat(floatValue) >= 0;
+    }
+
+    const dataInEmpty = (floatValue) => {
+      return floatValue === null;
     }
 
   }]
