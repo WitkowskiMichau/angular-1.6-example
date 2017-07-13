@@ -1,4 +1,10 @@
 # angularjs-webpack Formstack Front End Developer Applicant Assignment
+
+#Welcome
+
+Hello I decided to use npm, webpack, and ES6 as a template.
+Hope you'd like the results.
+
 ## Dependencies
 
 When you need to run this app:
@@ -16,8 +22,6 @@ After you have installed all dependencies you can now run the app with:
 `npm start`
 
 It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
-
-## Developing
 
 ### Build files
 
