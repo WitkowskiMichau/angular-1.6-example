@@ -14,7 +14,7 @@ module.exports = function makeWebpackConfig() {
   var config = {};
 
   config.entry = isTest ? void 0 : {
-    app: './src/app/app.js'
+    app: './src/app/app.module.js'
   };
 
   config.output = isTest ? {} : {
