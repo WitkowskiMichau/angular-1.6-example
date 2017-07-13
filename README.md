@@ -1,6 +1,6 @@
 # angularjs-webpack Formstack Front End Developer Applicant Assignment
 
-#Welcome
+
 
 Hello I decided to use npm, webpack, and ES6 as a template.
 Hope you'd like the results.
