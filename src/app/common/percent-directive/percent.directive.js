@@ -12,5 +12,8 @@ export const PercentDirective = () => {
 
 export const PercentController = () =>  {
   return ['$scope', function($scope) {
+    $scope.$watch('floatValue', function () {
+      this.percentValue = parseFloat($scope.floatValue) * 100 + '%'
+    }.bind(this));
   }]
 };
