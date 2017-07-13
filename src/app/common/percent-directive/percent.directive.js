@@ -1,6 +1,6 @@
 export const PercentDirective = () => {
   return {
-    template: '{{percentCtr.percentValue}}',
+    template: '<span class="{{percentCtr.elementClass}}">{{percentCtr.percentValue}}</span>',
     restrict: 'EA',
     controller: 'percentController',
     controllerAs: 'percentCtr',
@@ -18,14 +18,16 @@ export const PercentController = () => {
 
     const makePercent = (floatValue) => {
       if (dataIsValid(floatValue)) {
+        this.elementClass = 'valid';
         return parseFloat(floatValue) * 100 + '%'
       } else {
+        this.elementClass = 'invalid';
         return 'Number is not valid';
       }
     };
 
     const dataIsValid = (floatValue) => {
-      return floatValue && typeof floatValue === 'number' && floatValue <= 1 && floatValue >= 0;
+      return floatValue && parseFloat(floatValue) <= 1 && parseFloat(floatValue) >= 0;
     }
 
   }]

@@ -7,8 +7,6 @@ When you need to run this app:
 
 ## Installing
 
-* `fork` this repo
-* `clone` your fork
 * `npm install` to install all dependencies
 
 ## Running the app

@@ -25,10 +25,10 @@ describe('app', () => {
       expect(element.text()).toEqual('Number is not valid');
     });
 
-    it('should display procentage to the user', () => {
-      scope.outside = 0.23;
+    it('should me marked as invalid when < 0', () => {
+      scope.outside = -2;
       scope.$apply();
-      expect(element.text()).toEqual('23%');
+      expect(element.text()).toEqual('Number is not valid');
     });
   });
 });
