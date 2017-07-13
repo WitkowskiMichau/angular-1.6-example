@@ -35,7 +35,7 @@ export const PercentController = () => {
     };
 
     const dataIsValid = (floatValue) => {
-      return floatValue && parseFloat(floatValue) <= 1 && parseFloat(floatValue) >= 0;
+      return typeof floatValue !== 'undefined' && parseFloat(floatValue) <= 1 && parseFloat(floatValue) >= 0;
     }
 
     const dataInEmpty = (floatValue) => {
