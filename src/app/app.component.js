@@ -2,12 +2,11 @@ import angular from 'angular';
 
 export const AppComponent = {
   template: require('./app.html'),
-  controller: 'AppCtrl',
-  controllerAs: 'app'
+  controller: 'appController',
+  controllerAs: 'appCtrl'
 };
 
-export class AppCtrl {
+export class AppController {
   constructor() {
-    this.url = 'https://github.com/preboot/angular-webpack';
   }
 }

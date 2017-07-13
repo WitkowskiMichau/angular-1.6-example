@@ -7,7 +7,7 @@ describe('app', () => {
       angular.mock.module('app');
 
       angular.mock.inject(($controller) => {
-        ctrl = $controller('AppCtrl', {});
+        ctrl = $controller('appController', {});
       });
     });
 

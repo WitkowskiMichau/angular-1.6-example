@@ -1,5 +1,5 @@
 import angular from 'angular';
-import { AppComponent, AppCtrl } from './app.component';
+import { AppComponent, AppController } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { CommonModule } from './common/common.module';
 
@@ -11,5 +11,5 @@ export const AppModule = angular
     CommonModule,
   ])
   .component('app', AppComponent)
-  .controller('AppCtrl', AppCtrl)
+  .controller('appController', AppController)
   .name;
