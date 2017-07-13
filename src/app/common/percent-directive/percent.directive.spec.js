@@ -18,5 +18,17 @@ describe('app', () => {
       scope.$apply();
       expect(element.text()).toEqual('23%');
     });
+
+    it('should me marked as invalid when > 1', () => {
+      scope.outside = 12;
+      scope.$apply();
+      expect(element.text()).toEqual('Number is not valid');
+    });
+
+    it('should display procentage to the user', () => {
+      scope.outside = 0.23;
+      scope.$apply();
+      expect(element.text()).toEqual('23%');
+    });
   });
 });
