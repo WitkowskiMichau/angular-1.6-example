@@ -30,3 +30,9 @@ export const PercentController = () => {
 
   }]
 };
+
+export const PercentModule = angular
+  .module('app.common.percent', [])
+  .directive('percent', PercentDirective)
+  .controller('percentController', PercentController())
+  .name;
